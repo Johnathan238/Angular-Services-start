@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AccountComponent } from './account.component';
+import { InactiveUsersComponent } from './inactive-users.component';
 
-describe('AccountComponent', () => {
-  let component: AccountComponent;
-  let fixture: ComponentFixture<AccountComponent>;
+describe('InactiveUsersComponent', () => {
+  let component: InactiveUsersComponent;
+  let fixture: ComponentFixture<InactiveUsersComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AccountComponent ]
+      declarations: [ InactiveUsersComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AccountComponent);
+    fixture = TestBed.createComponent(InactiveUsersComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
