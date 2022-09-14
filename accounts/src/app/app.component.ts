@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { DataService } from './services/data.service';
+import { UsersService } from './services/users.service';
+
 
 @Component({
   selector: 'app-root',
@@ -7,22 +8,13 @@ import { DataService } from './services/data.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    activeUsers = ['Max', 'Anna'];
-  inactiveUsers = ['Chris', 'Manu'];
+  users: string[] | undefined
 
-  onSetToInactive(id: number) {
-    this.inactiveUsers.push(this.activeUsers[id]);
-    this.activeUsers.splice(id, 1);
-  }
-
-  onSetToActive(id: number) {
-    this.activeUsers.push(this.inactiveUsers[id]);
-    this.inactiveUsers.splice(id, 1);
-  }
-
-  constructor(){}
+  constructor(private allUsers: UsersService){}
 
   ngOnInit(){
+    this.users = this.allUsers.activeUsers
+    console.log(this.allUsers);
 
   }
 }
