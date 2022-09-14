@@ -19,5 +19,7 @@ export class InactiveUsersComponent implements OnInit {
 
   onSetToActive(id: number) {
     this.inActive.onSetToActive(id)
+    console.log(id);
+
   }
 }
